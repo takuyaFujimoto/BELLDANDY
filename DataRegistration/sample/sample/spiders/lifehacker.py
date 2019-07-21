@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from scraper.items import ScraperItem
+from sample.items import SampleItem
 
 
 class LifehackerSpider(scrapy.Spider):
@@ -10,7 +10,7 @@ class LifehackerSpider(scrapy.Spider):
 
     def parse(self, response):
         for content_item in response.css('div.lh-summary'):
-            item = ScraperItem()
+            item = SampleItem()
             href = content_item.css('h3.lh-summary-title a::attr(href)').extract_first()
             title = content_item.css('h3.lh-summary-title a::text').extract_first()
             item['title'] = title
