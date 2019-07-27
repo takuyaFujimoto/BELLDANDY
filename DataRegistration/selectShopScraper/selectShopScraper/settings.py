@@ -27,7 +27,6 @@ ROBOTSTXT_OBEY = True
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-# DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
@@ -64,9 +63,6 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'selectShopScraper.pipelines.SelectshopscraperPipeline': 300,
-# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -89,5 +85,17 @@ ROBOTSTXT_OBEY = True
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-DOWNLOAD_DELAY = 3
 FEED_EXPORT_ENCODING = 'utf-8'
+# 調査中
+# ITEM_PIPELINES = {
+#     'selectShopScraper.pipelines.SelectshopscraperPipeline': 300
+# }
+MONGO_URI = 'mongodb://localhost:27017'
+MONGO_DATABASE = 'BELLDANDY'
+MONGO_COLLECTION = 'shop_list'
+MONGOLAB_USER = 'root'
+MONGOLAB_PASS = 'example'
+REDIRECT_MAX_TIMES = 6
+RETRY_ENABLED = False
+DOWNLOAD_DELAY = 10
+COOKIES_ENABLED = False

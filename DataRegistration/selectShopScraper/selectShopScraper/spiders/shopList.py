@@ -15,7 +15,6 @@ class ShoplistSpider(scrapy.Spider):
         'li.commonPager_item.selected+li.commonPager_item a::attr(href)').extract_first())
     if next_url is None:
       return
-    print(next_url)
     for content_item in response.css('.listProduct_item.dualprice'):
       item = SelectshopscraperItem()
       item['name'] = content_item.css('div.genre.rdstr::text').extract_first()
