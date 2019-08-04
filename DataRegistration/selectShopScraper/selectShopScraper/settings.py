@@ -87,14 +87,14 @@ ROBOTSTXT_OBEY = True
 
 FEED_EXPORT_ENCODING = 'utf-8'
 # 調査中
-# ITEM_PIPELINES = {
-#     'selectShopScraper.pipelines.SelectshopscraperPipeline': 300
-# }
-MONGO_URI = 'mongodb://localhost:27017'
-MONGO_DATABASE = 'BELLDANDY'
-MONGO_COLLECTION = 'shop_list'
-MONGOLAB_USER = 'root'
-MONGOLAB_PASS = 'example'
+ITEM_PIPELINES = {
+    'selectShopScraper.pipelines.SelectshopscraperPipeline': 300
+}
+# MONGO_URI = 'mongodb://localhost:27017'
+# MONGO_DATABASE = 'BELLDANDY'
+# MONGO_COLLECTION = 'shop_list'
+# MONGOLAB_USER = 'root'
+# MONGOLAB_PASS = 'example'
 REDIRECT_MAX_TIMES = 6
 RETRY_ENABLED = False
 DOWNLOAD_DELAY = 10
