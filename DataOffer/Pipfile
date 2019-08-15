@@ -4,13 +4,15 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-flake8 = "*"
 
 [packages]
-scrapy = "*"
-autopep8 = "*"
-scrapy-mongodb = "*"
+flask = "*"
+waitress = "*"
 pymongo = "*"
+autopep8 = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+server = "python ./api/routes.py"
