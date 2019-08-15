@@ -86,15 +86,12 @@ ROBOTSTXT_OBEY = True
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 FEED_EXPORT_ENCODING = 'utf-8'
-# 調査中
 ITEM_PIPELINES = {
     'selectShopScraper.pipelines.SelectshopscraperPipeline': 300
 }
-# MONGO_URI = 'mongodb://localhost:27017'
-# MONGO_DATABASE = 'BELLDANDY'
-# MONGO_COLLECTION = 'shop_list'
-# MONGOLAB_USER = 'root'
-# MONGOLAB_PASS = 'example'
+MONGO_URI = 'mongodb://root:example@localhost:27017'
+MONGO_DATABASE = 'BELLDANDY'
+MONGO_COLLECTION = 'shop_list'
 REDIRECT_MAX_TIMES = 6
 RETRY_ENABLED = False
 DOWNLOAD_DELAY = 10
