@@ -1,8 +1,7 @@
 # coding: utf-8
 from pymongo import MongoClient
-# from bson.json_util import dumps
 
-class MongoDB(object):
+class ShopList(object):
   def __init__(self, mongo_uri, mongo_db, mongo_collection):
     self.client = MongoClient(mongo_uri)
     self.db = self.client[mongo_db]
@@ -20,9 +19,7 @@ class MongoDB(object):
   def get_all(self):
     return self.get()
 
-  def get_range(self, range):
-    start = int(range.split("-")[0])
-    end = int(range.split("-")[1])
+  def get_range(self, start, end):
     items = self.get()
     result = items[start:end]
     return result
