@@ -10,6 +10,7 @@ flask = "*"
 waitress = "*"
 pymongo = "*"
 autopep8 = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.7"
